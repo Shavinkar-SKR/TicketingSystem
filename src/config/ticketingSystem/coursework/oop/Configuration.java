@@ -1,5 +1,11 @@
 package config.ticketingSystem.coursework.oop;
 
+import com.google.gson.Gson;
+
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Configuration {
 
     private int totalTickets;
@@ -47,7 +53,17 @@ public class Configuration {
         this.maxTicketCapacity = maxTicketCapacity;
     }
 
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+    public void saveConfiguration(String filepath){
+        Gson gson = new Gson();
+        try{
+            FileWriter myWriter = new FileWriter("ConfigurationFile.txt");
+            myWriter.write("F");
+        }catch (IOException e){
+            System.out.println("Error occurred while writing to the file");
+        }
+    }
+
+    public void loadConfiguration(){
+
     }
 }

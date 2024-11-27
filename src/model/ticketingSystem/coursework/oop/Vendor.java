@@ -11,7 +11,7 @@ public class Vendor {
         this.ticketsPerRelease = ticketsPerRelease;
         this.releaseInterval = releaseInterval;
     }
-
+    /*
     public int getVendorID(){
         return this.vendorID;
     }
@@ -34,7 +34,7 @@ public class Vendor {
 
     public void setReleaseInterval(int releaseInterval){
         this.releaseInterval = releaseInterval;
-    }
+    }*/
 
     public void run(){
 
