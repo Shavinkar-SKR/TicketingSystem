@@ -57,7 +57,9 @@ public class Configuration {
         Gson gson = new Gson();
         try{
             FileWriter myWriter = new FileWriter(filepath);
-            myWriter.write("F");
+            String json = gson.toJson(this);
+            myWriter.write(json);
+            System.out.print(json);
         }catch (IOException e){
             System.out.println("Error occurred while writing to the file");
         }
