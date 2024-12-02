@@ -56,7 +56,7 @@ public class Configuration {
     public void saveConfiguration(String filepath){
         Gson gson = new Gson();
         try{
-            FileWriter myWriter = new FileWriter("ConfigurationFile.txt");
+            FileWriter myWriter = new FileWriter(filepath);
             myWriter.write("F");
         }catch (IOException e){
             System.out.println("Error occurred while writing to the file");
